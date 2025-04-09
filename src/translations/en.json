@@ -1,0 +1,50 @@
+{
+    "nav": {
+      "brand": "Yassine Magri",
+      "home": "Home",
+      "cv": "CV",
+      "gallery": "Gallery",
+      "contact": "Contact"
+    },
+    "home": {
+      "brand": "Yassine Magri",
+      "title": "UI/UX Designer & Front-End Developer",
+      "subtitle": "Creating intuitive and cohesive digital experiences",
+      "viewGallery": "View Gallery",
+      "viewCV": "View CV",
+      "featuredProjects": "Featured Projects",
+      "myApproach": "My Approach",
+      "projectType": "Web Application",
+      "features": {
+        "userCentered": "User-Centered Design",
+        "cleanCode": "Clean Code",
+        "responsive": "Responsive Solutions",
+        "description": "Creating intuitive and cohesive digital experiences that blend aesthetics with functionality."
+      }
+    },
+    "cv": {
+      "title": "DESIGNER UI/UX & FRONT-END DEVELOPER",
+      "contact": "Contact",
+      "profile": "Profile",
+      "profileText": "I combine UI/UX design with front-end development to create coherent and intuitive digital experiences.",
+      "career": "CAREER",
+      "education": "EDUCATION",
+      "skills": "SKILLS",
+      "languages": "LANGUAGES",
+      "skillsNote": "Progress percentages are based on experience levels.",
+      "downloadCV": "Download CV",
+      "showQRCode": "Show QR Code",
+      "scanToDownload": "Scan to download",
+      "qrDescription": "Scan this QR code to download my CV on your mobile device.",
+      "copyright": "© 2025 Yassine Magri. All rights reserved.",
+      "contactLinks": "Contact Links QR",
+      "scanForContact": "Scan for Contact Information",
+      "contactQrDescription": "Scan this QR code to access all my contact information and social media links."
+    },
+    "language": "Language",
+    "contactCard": {
+      "title": "Contact Information",
+      "viewCV": "View Full CV"
+    }
+  }
+  

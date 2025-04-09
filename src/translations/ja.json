@@ -1,0 +1,50 @@
+{
+    "nav": {
+      "brand": "ヤシン・マグリ",
+      "home": "ホーム",
+      "cv": "履歴書",
+      "gallery": "ギャラリー",
+      "contact": "お問い合わせ"
+    },
+    "home": {
+      "brand": "ヤシン・マグリ",
+      "title": "UI/UXデザイナー＆フロントエンド開発者",
+      "subtitle": "直感的で一貫性のあるデジタル体験を創造する",
+      "viewGallery": "ギャラリーを見る",
+      "viewCV": "履歴書を見る",
+      "featuredProjects": "注目のプロジェクト",
+      "myApproach": "私のアプローチ",
+      "projectType": "ウェブアプリケーション",
+      "features": {
+        "userCentered": "ユーザー中心設計",
+        "cleanCode": "クリーンコード",
+        "responsive": "レスポンシブソリューション",
+        "description": "美学と機能性を融合させた、直感的���一貫性のあるデジタル体験を創造します。"
+      }
+    },
+    "cv": {
+      "title": "UI/UXデザイナー＆フロントエンド開発者",
+      "contact": "連絡先",
+      "profile": "プロフィール",
+      "profileText": "UI/UXデザインとフロントエンド開発を組み合わせて、一貫性があり直感的なデジタル体験を設計しています。",
+      "career": "経歴",
+      "education": "学歴",
+      "skills": "スキル",
+      "languages": "言語",
+      "skillsNote": "進捗率は経験レベルに基づいています。",
+      "downloadCV": "履歴書をダウンロード",
+      "showQRCode": "QRコードを表示",
+      "scanToDownload": "スキャンしてダウンロード",
+      "qrDescription": "このQRコードをスキャンして、モバイルデバイスに履歴書をダウンロードしてください。",
+      "copyright": "© 2025 ヤシン・マグリ。全著作権所有。",
+      "contactLinks": "連絡先リンクQR",
+      "scanForContact": "連絡先情報をスキャン",
+      "contactQrDescription": "このQRコードをスキャンして、すべての連絡先情報とソーシャルメディアリンクにアクセスしてください。"
+    },
+    "language": "言語",
+    "contactCard": {
+      "title": "連絡先情報",
+      "viewCV": "履歴書を全て見る"
+    }
+  }
+  
