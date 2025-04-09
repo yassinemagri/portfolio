@@ -1,10 +1,10 @@
 
 
 import { useEffect } from "react"
-import { Routes, Route, BrowserRouter } from "react-router-dom"
+import { Routes, Route } from "react-router-dom"
 import Layout from "./layout/Layout"
 import Home from "./pages/Home"
-import CV from "@/pages/Cv"
+import CV from "@/pages/CV"
 import { useTranslation } from "react-i18next"
 
 export default function App() {
