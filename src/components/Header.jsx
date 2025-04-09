@@ -61,7 +61,7 @@ function NavLinks() {
         href="#"
         className="text-rose-600 hover:text-rose-800 dark:text-rose-300 dark:hover:text-rose-100 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300"
       >
-        {t("nav.gallery")}
+        {t("nav.projects")}
       </a>
       <a
         href="#"
