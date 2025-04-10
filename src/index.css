@@ -1,9 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&family=Noto+Serif+JP:wght@200..900&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
-
+@font-face {
+  font-family: 'mybestfont';
+  src: url('/fonts/mybestfonts.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -139,15 +144,16 @@
     @apply bg-background text-foreground;
   }
   .noto-serif-jp {
-    font-family: "Noto Serif JP", serif;
+    font-family: "Noto Serif JP", "El Messiri",serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
   }
   .el-messiri {
-    font-family: "El Messiri", sans-serif;
+    font-family: "El Messiri", sans-serif !important;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
   }
+
 }

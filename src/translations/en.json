@@ -10,11 +10,14 @@
       "brand": "Yassine Magri",
       "title": "UI/UX Designer & Front-End Developer",
       "subtitle": "Creating intuitive and cohesive digital experiences",
-      "viewGallery": "View Gallery",
+      "viewProjects": "View Projects",
       "viewCV": "View CV",
-      "featuredProjects": "Featured Projects",
+      "myProjects": "My Projects",
       "myApproach": "My Approach",
-      "projectType": "Web Application",
+      "projectType": {
+        "design": "Design",
+        "frontend": "FrontEnd"
+      },
       "features": {
         "userCentered": "User-Centered Design",
         "cleanCode": "Clean Code",

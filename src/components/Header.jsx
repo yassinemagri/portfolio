@@ -19,7 +19,7 @@ const Header = () => {
           <div className="flex-shrink-0 flex items-center">
             <Link
               to="/"
-              className={`text-2xl font-semibold text-rose-800 dark:text-rose-300 ${hiMelodyFont.className} transition-colors duration-300`}
+              className={`text-2xl font-semibold font-MyBestFont  text-rose-800 dark:text-rose-300 ${hiMelodyFont.className} transition-colors duration-300`}
             >
               {t("nav.brand")}
             </Link>
@@ -47,25 +47,25 @@ function NavLinks() {
     <>
       <Link
         to="/"
-        className="text-rose-600 hover:text-rose-800 dark:text-rose-300 dark:hover:text-rose-100 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300"
+        className="text-rose-600 uppercase hover:text-rose-800 dark:text-rose-300 dark:hover:text-rose-100 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300"
       >
         {t("nav.home")}
       </Link>
       <Link
         to="/cv"
-        className="text-rose-600 hover:text-rose-800 dark:text-rose-300 dark:hover:text-rose-100 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300"
+        className="text-rose-600 uppercase hover:text-rose-800 dark:text-rose-300 dark:hover:text-rose-100 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300"
       >
         {t("nav.cv")}
       </Link>
       <a
-        href="#"
-        className="text-rose-600 hover:text-rose-800 dark:text-rose-300 dark:hover:text-rose-100 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300"
+        href="#projects"
+        className="text-rose-600 uppercase hover:text-rose-800 dark:text-rose-300 dark:hover:text-rose-100 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300"
       >
         {t("nav.projects")}
       </a>
       <a
         href="#"
-        className="text-rose-600 hover:text-rose-800 dark:text-rose-300 dark:hover:text-rose-100 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300"
+        className="text-rose-600 uppercase hover:text-rose-800 dark:text-rose-300 dark:hover:text-rose-100 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300"
       >
         {t("nav.contact")}
       </a>

@@ -1,50 +1,52 @@
 {
-    "nav": {
-      "brand": "Yassine Magri",
-      "home": "Accueil",
-      "cv": "CV",
-      "projects": "Projects",
-      "contact": "Contact"
+  "nav": {
+    "brand": "Yassine Magri",
+    "home": "Accueil",
+    "cv": "CV",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "home": {
+    "brand": "Yassine Magri",
+    "title": "Designer UI/UX & Développeur Front-End",
+    "subtitle": "Création d'expériences numériques intuitives et cohérentes",
+    "viewProjects": "Voir les projets",
+    "viewCV": "Voir le CV",
+    "myProjects": "Mes Projets",
+    "myApproach": "Mon Approche",
+    "projectType": {
+      "design": "Design",
+      "frontend": "Développement FrontEnd"
     },
-    "home": {
-      "brand": "Yassine Magri",
-      "title": "Designer UI/UX & Développeur Front-End",
-      "subtitle": "Création d'expériences numériques intuitives et cohérentes",
-      "viewGallery": "Voir la Galerie",
-      "viewCV": "Voir le CV",
-      "featuredProjects": "Projets en Vedette",
-      "myApproach": "Mon Approche",
-      "projectType": "Application Web",
-      "features": {
-        "userCentered": "Design Centré sur l'Utilisateur",
-        "cleanCode": "Code Propre",
-        "responsive": "Solutions Responsives",
-        "description": "Création d'expériences numériques intuitives et cohérentes qui allient esthétique et fonctionnalité."
-      }
-    },
-    "cv": {
-      "title": "DESIGNER UI/UX & DÉVELOPPEUR FRONT-END",
-      "contact": "Contact",
-      "profile": "Profil",
-      "profileText": "J'allie le design UI/UX au développement front-end afin de concevoir des expériences numériques cohérentes et intuitives.",
-      "career": "CARRIÈRE",
-      "education": "ÉDUCATION",
-      "skills": "COMPÉTENCES",
-      "languages": "LANGUES",
-      "skillsNote": "Les pourcentages de progression sont basés sur les niveaux d'expérience.",
-      "downloadCV": "Télécharger CV",
-      "showQRCode": "Afficher QR Code",
-      "scanToDownload": "Scannez pour télécharger",
-      "qrDescription": "Scannez ce code QR pour télécharger mon CV sur votre appareil mobile.",
-      "copyright": "© 2025 Yassine Magri. Tous droits réservés.",
-      "contactLinks": "QR Liens de Contact",
-      "scanForContact": "Scanner pour les Coordonnées",
-      "contactQrDescription": "Scannez ce code QR pour accéder à toutes mes coordonnées et liens de médias sociaux."
-    },
-    "language": "Langue",
-    "contactCard": {
-      "title": "Informations de Contact",
-      "viewCV": "Voir CV Complet"
+    "features": {
+      "userCentered": "Design Centré sur l'Utilisateur",
+      "cleanCode": "Code Propre",
+      "responsive": "Solutions Responsives",
+      "description": "Création d'expériences numériques intuitives et cohérentes qui allient esthétique et fonctionnalité."
     }
+  },
+  "cv": {
+    "title": "DESIGNER UI/UX & DÉVELOPPEUR FRONT-END",
+    "contact": "Contact",
+    "profile": "Profil",
+    "profileText": "J'allie le design UI/UX au développement front-end afin de concevoir des expériences numériques cohérentes et intuitives.",
+    "career": "CARRIÈRE",
+    "education": "ÉDUCATION",
+    "skills": "COMPÉTENCES",
+    "languages": "LANGUES",
+    "skillsNote": "Les pourcentages de progression sont basés sur les niveaux d'expérience.",
+    "downloadCV": "Télécharger CV",
+    "showQRCode": "Afficher QR Code",
+    "scanToDownload": "Scannez pour télécharger",
+    "qrDescription": "Scannez ce code QR pour télécharger mon CV sur votre appareil mobile.",
+    "copyright": "© 2025 Yassine Magri. Tous droits réservés.",
+    "contactLinks": "QR Liens de Contact",
+    "scanForContact": "Scanner pour les Coordonnées",
+    "contactQrDescription": "Scannez ce code QR pour accéder à toutes mes coordonnées et liens de médias sociaux."
+  },
+  "language": "Langue",
+  "contactCard": {
+    "title": "Informations de Contact",
+    "viewCV": "Voir CV Complet"
   }
-  
+}

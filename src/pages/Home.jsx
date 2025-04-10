@@ -46,10 +46,10 @@ export default function Home() {
           <div className="mt-8 flex justify-center space-x-4">
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <a
-                href="#gallery"
+                href="#projects"
                 className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-rose-900 dark:text-rose-100 bg-white/90 dark:bg-gray-900/90 hover:bg-white dark:hover:bg-gray-900 transition-colors duration-300 backdrop-blur-sm"
               >
-                {t("home.viewGallery")}
+                {t("home.viewProjects")}
               </a>
             </motion.div>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
@@ -67,7 +67,7 @@ export default function Home() {
       {/* Rest of the component remains the same */}
       <div className="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
         <motion.div
-          id="gallery"
+          id="projects"
           className="mt-16"
           initial="initial"
           animate="animate"
@@ -76,7 +76,7 @@ export default function Home() {
           <h2
             className={`text-3xl font-hi-melody tracking-tight text-rose-800 dark:text-rose-300 transition-colors duration-300`}
           >
-            {t("home.featuredProjects")}
+            {t("home.myProjects")}
           </h2>
           <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
             {[
@@ -84,7 +84,7 @@ export default function Home() {
                 id: "1",
                 name: "noir",
                 img: "https://i.ibb.co/bMhcpRDy/Noir.png",
-                type: t("home.projectType"),
+                type: t("home.projectType.design"),
                 url: "https://github.com/LIZEWESKI/noir",
                 date: "2/17/2025",
               },

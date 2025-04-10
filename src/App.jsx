@@ -12,6 +12,9 @@ export default function App() {
 
   useEffect(() => {
     document.documentElement.lang = i18n.language
+    document.documentElement.classList.add('scroll-smooth');
+    document.querySelector('body').classList.toggle('el-messiri', document.documentElement.lang === "ar");
+
   }, [i18n.language])
 
   return (
