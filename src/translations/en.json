@@ -25,6 +25,34 @@
         "description": "Creating intuitive and cohesive digital experiences that blend aesthetics with functionality."
       }
     },
+    "skills": {
+      "title": "My Skills",
+      "subtitle": "Technologies and tools I work with"
+    },
+    "timeline": {
+      "title": "My Journey",
+      "subtitle": "A look at my professional experience and education",
+      "job1": {
+        "title": "Senior UI/UX Designer",
+        "company": "Creative Tech Solutions",
+        "description": "Leading design initiatives for enterprise clients, focusing on creating intuitive and accessible user experiences."
+      },
+      "job2": {
+        "title": "Front-End Developer",
+        "company": "Digital Innovations Inc.",
+        "description": "Developed responsive web applications using React, focusing on performance optimization and accessibility."
+      },
+      "education1": {
+        "title": "Master's in Interactive Design",
+        "institution": "Design University",
+        "description": "Specialized in user experience research and interface design with a focus on emerging technologies."
+      },
+      "project1": {
+        "title": "E-commerce Platform Redesign",
+        "type": "Major Project",
+        "description": "Completely redesigned the user flow and interface for an e-commerce platform, resulting in a 40% increase in conversion rate."
+      }
+    },
     "cv": {
       "title": "DESIGNER UI/UX & FRONT-END DEVELOPER",
       "contact": "Contact",

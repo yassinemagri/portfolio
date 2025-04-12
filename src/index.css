@@ -3,12 +3,18 @@
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
+
 @font-face {
-  font-family: 'mybestfont';
+  font-family: 'MyBestFont';
   src: url('/fonts/mybestfonts.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
+.font-my-best {
+  font-family: "MyBestFont", sans-serif;
+}
+
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -156,4 +162,34 @@
     font-style: normal;
   }
 
+}
+
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(var(--scroll-distance));
+  }
+}
+
+@keyframes scrollRight {
+  0% {
+    transform: translateX(var(--scroll-distance));
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-scroll-left {
+  animation: scrollLeft var(--scroll-duration, 40s) linear infinite;
+}
+
+.animate-scroll-right {
+  animation: scrollRight var(--scroll-duration, 40s) linear infinite;
+}
+.group:hover .pause-on-hover {
+  animation-play-state: paused;
 }

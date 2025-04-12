@@ -18,7 +18,7 @@ export default function CV() {
   const { t } = useTranslation()
   const [isQrDialogOpen, setIsQrDialogOpen] = useState(false)
   const [isLinksQrDialogOpen, setIsLinksQrDialogOpen] = useState(false)
-  const cvDownloadUrl = "@/downloads/yassine-magri-cv.pdf"
+  const cvDownloadUrl = "/downloads/yassine-magri-cv.pdf"
   const cvDownloadUrlFull = `${typeof window !== "undefined" ? window.location.origin : ""}${cvDownloadUrl}`
 
   const contactCardUrl = `${typeof window !== "undefined" ? window.location.origin : ""}/contact-card`
@@ -242,14 +242,6 @@ export default function CV() {
                   </h4>
                   <p className="text-gray-700 dark:text-gray-300 transition-colors duration-300">
                     Diplôme de Technicien en Design de Bâtiment
-                  </p>
-                </div>
-                <div>
-                  <h4 className="font-bold text-gray-800 dark:text-gray-200 transition-colors duration-300">
-                    2017-2018
-                  </h4>
-                  <p className="text-gray-700 dark:text-gray-300 transition-colors duration-300">
-                    Niveau Bac - Littérature moderne
                   </p>
                 </div>
               </div>

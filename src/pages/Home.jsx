@@ -1,10 +1,19 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import Timeline from "@/components/TimeLine";
+import InfiniteSkillsScroll from "@/components/InfiniteSkillsScroll";
+import { Button } from "@/components/ui/button";
+import SeasonalEffect from "@/components/SeasonalEffect";
+import { Github, Instagram, Phone, Youtube } from "lucide-react";
+import imgDark from "/imgs/yassine-magri.png";
+import imgLight from "/imgs/yassine-magri-rose.png";
+import { useTheme } from "@/components/theme-provider";
+import MyProjects from "@/components/MyProjects";
 
 export default function Home() {
   const { t } = useTranslation();
-
+  // const { theme } = useTheme()
   const fadeIn = {
     initial: { opacity: 0, y: 20 },
     animate: { opacity: 1, y: 0 },
@@ -12,21 +21,26 @@ export default function Home() {
   };
 
   return (
-    <div className="bg-rose-50 dark:bg-gray-950 transition-colors duration-300">
+    <div className="bg-rose-100 dark:bg-gray-950 transition-colors duration-300">
       <div className="relative min-h-screen flex items-center justify-center">
         <div className="absolute inset-0">
-          {/* Fix the image source with a reliable URL or local image */}
-          <img
-            src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2064&auto=format&fit=crop"
-            alt="Abstract art background"
-            className="object-cover w-full h-full"
-            onError={(e) => {
-              e.target.onerror = null;
-              e.target.src =
-                "https://via.placeholder.com/1920x1080?text=Background+Image";
+          <div
+            className="w-full h-full bg-fixed bg-cover"
+            style={{
+              backgroundImage: `url(${imgLight})`,
+              backgroundPosition: "center",
             }}
-          />
+          ></div>
           <div className="absolute inset-0 bg-black/40 dark:bg-black/60 transition-colors duration-300"></div>
+          {/* Seasonal effect overlay */}
+          <SeasonalEffect />
+          {/* Scroll indicator */}
+          <div className="absolute max-sm:bottom-0 min-md:bottom-20 left-1/2 transform -translate-x-1/2">
+            <div className="flex flex-col items-center gap-2">
+              <span className="text-sm text-rose-100">Scroll</span>
+              <div className="w-px h-8 bg-gradient-to-b from-primary to-transparent" />
+            </div>
+          </div>
         </div>
         <motion.div
           className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto"
@@ -37,13 +51,13 @@ export default function Home() {
           <h1
             className={`text-4xl font-hi-melody tracking-tight text-white sm:text-5xl md:text-6xl drop-shadow-lg`}
           >
-            <span className="block">{t("home.brand")}</span>
+            <span className="block font-my-best">{t("home.brand")}</span>
             <span className="block text-rose-100">{t("home.title")}</span>
           </h1>
           <p className="mt-3 text-base text-white sm:text-lg md:mt-5 md:text-xl max-w-2xl mx-auto drop-shadow-lg">
             {t("home.subtitle")}
           </p>
-          <div className="mt-8 flex justify-center space-x-4">
+          <div className="m-8 flex justify-center space-x-4">
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <a
                 href="#projects"
@@ -61,76 +75,32 @@ export default function Home() {
               </Link>
             </motion.div>
           </div>
+          <div className="space-x-4 ">
+            <Button className="cursor-pointer hover:bg-black hover:text-white  transition-all duration-300 ease-in-out">
+              <Github />
+            </Button>
+            <Button className="cursor-pointer hover:bg-[#D62976] hover:text-white transition-all duration-300 ease-in-out">
+              <Instagram />
+            </Button>
+
+            <Button className="cursor-pointer hover:bg-red-600 hover:text-white transition-all duration-300 ease-in-out">
+              <Youtube />
+            </Button>
+
+            <Button className="cursor-pointer hover:bg-[#25D366] hover:text-white transition-all duration-300 ease-in-out">
+              <Phone />
+            </Button>
+          </div>
         </motion.div>
       </div>
 
       {/* Rest of the component remains the same */}
       <div className="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
-        <motion.div
-          id="projects"
-          className="mt-16"
-          initial="initial"
-          animate="animate"
-          variants={fadeIn}
-        >
-          <h2
-            className={`text-3xl font-hi-melody tracking-tight text-rose-800 dark:text-rose-300 transition-colors duration-300`}
-          >
-            {t("home.myProjects")}
-          </h2>
-          <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
-            {[
-              {
-                id: "1",
-                name: "noir",
-                img: "https://i.ibb.co/bMhcpRDy/Noir.png",
-                type: t("home.projectType.design"),
-                url: "https://github.com/LIZEWESKI/noir",
-                date: "2/17/2025",
-              },
-            ].map((item) => (
-              <motion.div
-                key={item.id}
-                className="group relative"
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.3 }}
-              >
-                <div className="w-full min-h-80 bg-rose-200 dark:bg-rose-900 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none transition-colors duration-300">
-                  <img
-                    src={item.img || "/placeholder.svg"}
-                    alt="Project thumbnail"
-                    className="w-full h-full object-center object-cover lg:w-full lg:h-full"
-                    onError={(e) => {
-                      e.target.onerror = null;
-                      e.target.src =
-                        "https://via.placeholder.com/400x400?text=Project+Image";
-                    }}
-                  />
-                </div>
-                <div className="mt-4 flex justify-between">
-                  <div>
-                    <h3 className="text-sm text-rose-700 dark:text-rose-300 transition-colors duration-300">
-                      <a href={item.url} target="_blank" rel="noreferrer">
-                        <span
-                          aria-hidden="true"
-                          className="absolute inset-0"
-                        ></span>
-                        {item.name}
-                      </a>
-                    </h3>
-                    <p className="mt-1 text-sm text-rose-500 dark:text-rose-400 transition-colors duration-300">
-                      {item.type}
-                    </p>
-                  </div>
-                  <p className="text-sm font-medium text-rose-900 dark:text-rose-200 transition-colors duration-300">
-                    {item.date}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-
+        <MyProjects />
+        {/* Timeline Section */}
+        <Timeline />
+        {/* Skills Scroll Section */}
+        <InfiniteSkillsScroll />
         <motion.div
           className="mt-16"
           initial="initial"

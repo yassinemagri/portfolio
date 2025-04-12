@@ -19,7 +19,7 @@ const Header = () => {
           <div className="flex-shrink-0 flex items-center">
             <Link
               to="/"
-              className={`text-2xl font-semibold font-MyBestFont  text-rose-800 dark:text-rose-300 ${hiMelodyFont.className} transition-colors duration-300`}
+              className={`text-2xl font-my-best text-rose-800 dark:text-rose-300 ${hiMelodyFont.className} transition-colors duration-300`}
             >
               {t("nav.brand")}
             </Link>
