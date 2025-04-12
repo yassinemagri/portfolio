@@ -38,7 +38,7 @@ export default function Home() {
           <div className="absolute max-sm:bottom-0 min-md:bottom-20 left-1/2 transform -translate-x-1/2">
             <div className="flex flex-col items-center gap-2">
               <span className="text-sm text-rose-100">Scroll</span>
-              <div className="w-px h-8 bg-gradient-to-b from-primary to-transparent" />
+              <div className="w-px h-8 bg-gradient-to-b from-rose-100 to-transparent" />
             </div>
           </div>
         </div>
@@ -76,18 +76,34 @@ export default function Home() {
             </motion.div>
           </div>
           <div className="space-x-4 ">
-            <Button className="cursor-pointer hover:bg-black hover:text-white  transition-all duration-300 ease-in-out">
+            <Button 
+                  className="cursor-pointer hover:bg-black hover:text-white  transition-all duration-300 ease-in-out"
+                  data-ig-origin-url="https://yassinemagri.vercel.app/"
+                  onClick={() => window.open('https://yassinemagri.vercel.app/', '_blank', 'width=1000,height=900')}
+            >
               <Github />
             </Button>
-            <Button className="cursor-pointer hover:bg-[#D62976] hover:text-white transition-all duration-300 ease-in-out">
+            <Button 
+                  className="cursor-pointer hover:bg-[#D62976] hover:text-white transition-all duration-300 ease-in-out"
+                  data-ig-origin-url="https://yassinemagri.vercel.app/"
+                  onClick={() => window.open('https://yassinemagri.vercel.app/', '_blank', 'width=1000,height=900')}
+            >
               <Instagram />
             </Button>
 
-            <Button className="cursor-pointer hover:bg-red-600 hover:text-white transition-all duration-300 ease-in-out">
+            <Button 
+                  className="cursor-pointer hover:bg-red-600 hover:text-white transition-all duration-300 ease-in-out"
+                  data-ig-origin-url="https://yassinemagri.vercel.app/"
+                  onClick={() => window.open('https://yassinemagri.vercel.app/', '_blank', 'width=1000,height=900')}
+            >
               <Youtube />
             </Button>
 
-            <Button className="cursor-pointer hover:bg-[#25D366] hover:text-white transition-all duration-300 ease-in-out">
+            <Button 
+                  className="cursor-pointer hover:bg-[#25D366] hover:text-white transition-all duration-300 ease-in-out"
+                  data-ig-origin-url="https://yassinemagri.vercel.app/"
+                  onClick={() => window.open('https://yassinemagri.vercel.app/', '_blank', 'width=1000,height=900')}
+            >
               <Phone />
             </Button>
           </div>
