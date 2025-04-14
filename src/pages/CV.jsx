@@ -334,7 +334,7 @@ export default function CV() {
             <div className="flex flex-col sm:flex-row gap-3 mb-4 sm:mb-0">
               <Button
                 onClick={handleDownload}
-                className="bg-rose-600 hover:bg-rose-700 text-white flex items-center gap-2 transition-colors duration-300"
+                className="bg-rose-600 cursor-pointer hover:bg-rose-700 text-white flex items-center gap-2 transition-colors duration-300"
               >
                 <Download size={16} />
                 {t("cv.downloadCV")}
@@ -344,7 +344,7 @@ export default function CV() {
                 <DialogTrigger asChild>
                   <Button
                     variant="outline"
-                    className="border-rose-300 dark:border-rose-700 text-rose-600 dark:text-rose-300 hover:bg-rose-50 dark:hover:bg-gray-700 flex items-center gap-2 transition-colors duration-300"
+                    className="border-rose-300 cursor-pointer dark:border-rose-700 text-rose-600 dark:text-rose-300 hover:bg-rose-50 dark:hover:bg-gray-700 flex items-center gap-2 transition-colors duration-300"
                   >
                     <QrCode size={16} />
                     {t("cv.showQRCode")}
@@ -379,7 +379,7 @@ export default function CV() {
                 <DialogTrigger asChild>
                   <Button
                     variant="outline"
-                    className="border-rose-300 dark:border-rose-700 text-rose-600 dark:text-rose-300 hover:bg-rose-50 dark:hover:bg-gray-700 flex items-center gap-2 transition-colors duration-300"
+                    className="border-rose-300 cursor-pointer dark:border-rose-700 text-rose-600 dark:text-rose-300 hover:bg-rose-50 dark:hover:bg-gray-700 flex items-center gap-2 transition-colors duration-300"
                   >
                     <Link size={16} />
                     Contact Links QR
@@ -413,7 +413,7 @@ export default function CV() {
               </Dialog>
             </div>
 
-            <p className="text-sm text-gray-600 dark:text-gray-400 mt-4 sm:mt-0 transition-colors duration-300">
+            <p className="text-sm sm:ml-4 text-gray-600 dark:text-gray-400 mt-4 sm:mt-0 transition-colors duration-300">
               {t("cv.copyright")}
             </p>
           </div>
