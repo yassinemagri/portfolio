@@ -79,14 +79,14 @@ export default function Home() {
             <Button 
                   className="cursor-pointer hover:bg-black hover:text-white  transition-all duration-300 ease-in-out"
                   data-ig-origin-url="https://yassinemagri.vercel.app/"
-                  onClick={() => window.open('https://yassinemagri.vercel.app/', '_blank', 'width=1000,height=900')}
+                  onClick={() => window.open('www.github.com/yassinemagri', '_blank')}
             >
               <Github />
             </Button>
             <Button 
                   className="cursor-pointer hover:bg-[#D62976] hover:text-white transition-all duration-300 ease-in-out"
                   data-ig-origin-url="https://yassinemagri.vercel.app/"
-                  onClick={() => window.open('https://yassinemagri.vercel.app/', '_blank', 'width=1000,height=900')}
+                  onClick={() => window.open('https://www.instagram.com/yassinemagri/', '_blank')}
             >
               <Instagram />
             </Button>
@@ -94,7 +94,7 @@ export default function Home() {
             <Button 
                   className="cursor-pointer hover:bg-red-600 hover:text-white transition-all duration-300 ease-in-out"
                   data-ig-origin-url="https://yassinemagri.vercel.app/"
-                  onClick={() => window.open('https://yassinemagri.vercel.app/', '_blank', 'width=1000,height=900')}
+                  onClick={() => window.open('https://www.youtube.com/results?search_query=%40yassinemagri&sp=EgIQAg%253D%253D', '_blank', 'width=1000,height=900')}
             >
               <Youtube />
             </Button>
@@ -102,6 +102,7 @@ export default function Home() {
             <Button 
                   className="cursor-pointer hover:bg-[#25D366] hover:text-white transition-all duration-300 ease-in-out"
                   data-ig-origin-url="https://yassinemagri.vercel.app/"
+                  disabled
                   onClick={() => window.open('https://yassinemagri.vercel.app/', '_blank', 'width=1000,height=900')}
             >
               <Phone />
