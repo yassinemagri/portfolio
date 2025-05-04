@@ -2,6 +2,8 @@ import { Link } from "react-router-dom"
 import { useTranslation } from "react-i18next"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { LanguageSwitcher } from "@/components/language-switcher"
+import { useState } from "react"
+import Contact from "./Contact"
 // Alternative approach using CSS variables
 const hiMelodyFont = {
   className: "font-hi-melody",
@@ -10,7 +12,6 @@ const hiMelodyFont = {
 
 const Header = () => {
   const { t } = useTranslation()
-
   return (
     <header className="bg-white dark:bg-gray-900 shadow-sm transition-colors duration-300">
     <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -42,6 +43,7 @@ export default Header
 
 function NavLinks() {
   const { t } = useTranslation()
+  const [contactDialogOpen,setContactDialogOpen] = useState(false)
 
   return (
     <>
@@ -58,16 +60,17 @@ function NavLinks() {
         {t("nav.cv")}
       </Link>
       <a
-        href="#projects"
+        href="/#projects"
         className="text-rose-600 uppercase hover:text-rose-800 dark:text-rose-300 dark:hover:text-rose-100 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300"
       >
         {t("nav.projects")}
       </a>
       <a
-        href="#"
+        onClick={()=> setContactDialogOpen(true)}
         className="text-rose-600 uppercase hover:text-rose-800 dark:text-rose-300 dark:hover:text-rose-100 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300"
       >
-        {t("nav.contact")}
+        
+      {/* <Contact /> */}
       </a>
     </>
   )

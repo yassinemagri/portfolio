@@ -49,15 +49,13 @@ export default function CV() {
   ];
 
   const languages = [
-    { name: "Arabe", level: 95 },
-    { name: "Français", level: 90 },
+    { name: "Arabe", level: 98 },
+    { name: "Français", level: 60 },
     { name: "Anglais", level: 85 },
   ];
 
   const handleDownload = () => {
-    // In a real application, this would download the actual PDF
-    // For now, we'll just alert the user
-    window.open('/downloads/yassine-magri-cv.pdf')
+    window.open("/downloads/yassine-magri-cv.pdf");
     console.log(
       "CV download would start here. In a real application, this would download the PDF file."
     );
@@ -228,8 +226,6 @@ export default function CV() {
                 </div>
               </div>
             </div>
-
-
           </div>
 
           {/* Right Column */}
@@ -263,7 +259,7 @@ export default function CV() {
                     2024-2025
                   </h4>
                   <p className="text-gray-700 dark:text-gray-300 transition-colors duration-300">
-                  Design UI/UX - Auto-formation
+                    Design UI/UX - Auto-formation
                   </p>
                 </div>
                 <div>
@@ -333,6 +329,7 @@ export default function CV() {
           <div className="flex flex-col sm:flex-row justify-between items-center">
             <div className="flex flex-col sm:flex-row gap-3 mb-4 sm:mb-0">
               <Button
+                disabled
                 onClick={handleDownload}
                 className="bg-rose-600 cursor-pointer hover:bg-rose-700 text-white flex items-center gap-2 transition-colors duration-300"
               >
@@ -343,6 +340,7 @@ export default function CV() {
               <Dialog open={isQrDialogOpen} onOpenChange={setIsQrDialogOpen}>
                 <DialogTrigger asChild>
                   <Button
+                    disabled
                     variant="outline"
                     className="border-rose-300 cursor-pointer dark:border-rose-700 text-rose-600 dark:text-rose-300 hover:bg-rose-50 dark:hover:bg-gray-700 flex items-center gap-2 transition-colors duration-300"
                   >
@@ -378,6 +376,7 @@ export default function CV() {
               >
                 <DialogTrigger asChild>
                   <Button
+                    disabled
                     variant="outline"
                     className="border-rose-300 cursor-pointer dark:border-rose-700 text-rose-600 dark:text-rose-300 hover:bg-rose-50 dark:hover:bg-gray-700 flex items-center gap-2 transition-colors duration-300"
                   >
