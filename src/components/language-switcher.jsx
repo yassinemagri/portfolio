@@ -1,10 +1,8 @@
-"use client";
-
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Globe } from "lucide-react";
 import { i18n } from "./i18n-provider"; // Import the i18n instance directly
-
+import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from "@/components/ui/dropdown-menu";
+import { Globe } from "lucide-react";
 export function LanguageSwitcher() {
   const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
@@ -16,6 +14,7 @@ export function LanguageSwitcher() {
   const changeLanguage = (lng) => {
     // Use the imported i18n instance directly
     i18n.changeLanguage(lng);
+    localStorage.setItem("appLanguage", lng);
     setIsOpen(false);
   };
 
@@ -28,36 +27,31 @@ export function LanguageSwitcher() {
   ];
 
   return (
-    <div className="relative">
-      <button
-        onClick={toggleDropdown}
-        className="p-2 rounded-md cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors flex items-center gap-1"
-        aria-label={t("language")}
-      >
-        <Globe className="h-5 w-5 text-rose-600 dark:text-rose-300" />
-      </button>
-
-      {isOpen && (
-        <div className="absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white dark:bg-gray-800 ring-1 ring-black ring-opacity-5 z-10">
-          <div className="py-1" role="menu" aria-orientation="vertical">
-            {languages.map((lang) => (
-              <button
-                key={lang.code}
-                onClick={() => changeLanguage(lang.code)}
-                className={`block w-full text-left px-4 py-2 text-sm cursor-pointer ${
-                  i18n.language === lang.code
-                    ? "bg-rose-50 text-rose-700 dark:bg-rose-900/20 dark:text-rose-300"
-                    : "text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
-                }`}
-                role="menuitem"
-              >
-                {lang.name}
-              </button>
-            ))}
-          </div>
-        </div>
-      )}
-    </div>
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <button
+          className="p-2 rounded-md cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors flex items-center gap-1"
+          aria-label={t("language")}
+        >
+          <Globe className="h-5 w-5 text-rose-600 dark:text-rose-300" />
+        </button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent align="end" className="w-48">
+        {languages.map((lang) => (
+          <DropdownMenuItem
+            key={lang.code}
+            onClick={() => changeLanguage(lang.code)}
+            className={`cursor-pointer ${
+              i18n.language === lang.code
+                ? "bg-rose-50 text-rose-700 dark:bg-rose-900/20 dark:text-rose-300"
+                : "text-gray-700 dark:text-gray-200"
+            }`}
+          >
+            {lang.name}
+          </DropdownMenuItem>
+        ))}
+      </DropdownMenuContent>
+    </DropdownMenu>
   );
 }
 

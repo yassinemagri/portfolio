@@ -54,6 +54,7 @@ const MyProjects = () => {
               <img
                 src={item.img || "/placeholder.svg"}
                 alt="Project thumbnail"
+                loading="lazy" 
                 className="w-full h-full object-center object-cover lg:w-full lg:h-full"
                 onError={(e) => {
                   e.target.onerror = null;
