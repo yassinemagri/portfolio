@@ -8,6 +8,8 @@ import {
   QrCode,
   Link,
   Palette,
+  Share,
+  Share2,
 } from "lucide-react";
 import { useState } from "react";
 import { QRCodeGenerator } from "../components/qr-code";
@@ -61,6 +63,19 @@ export default function CV() {
     );
   };
 
+  function sharePage() {
+    if (navigator.share) {
+      navigator
+        .share({
+          title: document.title,
+          url: window.location.href,
+        })
+        .then(() => console.log("Shared successfully!"))
+        .catch((error) => console.log("Error sharing:", error));
+    } else {
+      alert("Web Share API is not supported in this browser.");
+    }
+  }
   return (
     <div className="bg-white dark:bg-gray-950 min-h-screen py-12 px-4 sm:px-6 lg:px-8 transition-colors duration-300">
       <motion.div
@@ -370,46 +385,14 @@ export default function CV() {
               </Dialog>
 
               {/* New QR Code for Contact Links */}
-              <Dialog
-                open={isLinksQrDialogOpen}
-                onOpenChange={setIsLinksQrDialogOpen}
+              <Button
+                variant="outline"
+                className="border-rose-300 cursor-pointer dark:border-rose-700 text-rose-600 dark:text-rose-300 hover:bg-rose-50 dark:hover:bg-gray-700 flex items-center gap-2 transition-colors duration-300"
+                onClick={() => sharePage()}
               >
-                <DialogTrigger asChild>
-                  <Button
-                    disabled
-                    variant="outline"
-                    className="border-rose-300 cursor-pointer dark:border-rose-700 text-rose-600 dark:text-rose-300 hover:bg-rose-50 dark:hover:bg-gray-700 flex items-center gap-2 transition-colors duration-300"
-                  >
-                    <Link size={16} />
-                    Contact Links QR
-                  </Button>
-                </DialogTrigger>
-                <DialogContent className="sm:max-w-md">
-                  <DialogHeader>
-                    <DialogTitle className="font-hi-melody text-xl text-center mb-2">
-                      Scan for Contact Information
-                    </DialogTitle>
-                    <DialogDescription className="text-center">
-                      Scan this QR code to access all my contact information and
-                      social media links.
-                    </DialogDescription>
-                  </DialogHeader>
-                  <div className="flex justify-center p-6">
-                    <div className="bg-white p-4 rounded-lg">
-                      <QRCodeGenerator
-                        url={contactCardUrl}
-                        size={200}
-                        className="mx-auto"
-                      />
-                      <div className="mt-4 text-center space-y-2 text-sm text-gray-600">
-                        <p>Email: yassine.magri@gmail.com</p>
-                        <p>GitHub: yassinemagri</p>
-                        <p>Behance: yassinemagri</p>
-                      </div>
-                    </div>
-                  </div>
-                </DialogContent>
-              </Dialog>
+                <Share2 size={16} />
+                Share
+              </Button>
             </div>
 
             <p className="text-sm sm:ml-4 text-gray-600 dark:text-gray-400 mt-4 sm:mt-0 transition-colors duration-300">

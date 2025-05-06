@@ -1,3 +1,4 @@
+import SeasonalEffect from "@/components/SeasonalEffect";
 import { Button } from "@/components/ui/button";
 import { useEffect, useRef } from "react";
 
@@ -40,9 +41,9 @@ const NotFound = () => {
   }, []);
 
   return (
-    <div className="flex flex-col justify-center items-center">
+    <div className="flex flex-col justify-center items-center h-screen">
       <h1 className="text-[16em] font-bold my-16">404</h1>
-      <h1 className="text-4xl mb-8">[x_x] ...Page Not Found</h1>
+      <h1 className="text-4xl mb-8">[x_x]... Page Not Found</h1>
       <Button className="mb-8" onClick={() => window.open("/")}>
         Go Back
       </Button>

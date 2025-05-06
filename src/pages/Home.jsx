@@ -6,9 +6,7 @@ import InfiniteSkillsScroll from "@/components/InfiniteSkillsScroll";
 import { Button } from "@/components/ui/button";
 import SeasonalEffect from "@/components/SeasonalEffect";
 import { Github, Instagram, Phone, Youtube } from "lucide-react";
-import imgDark from "/imgs/yassine-magri.png";
 import imgLight from "/imgs/yassine-magri-rose.jpg";
-import { useTheme } from "@/components/theme-provider";
 import MyProjects from "@/components/MyProjects";
 
 export default function Home() {
@@ -76,34 +74,50 @@ export default function Home() {
             </motion.div>
           </div>
           <div className="space-x-4 ">
-            <Button 
-                  className="cursor-pointer hover:bg-black hover:text-white  transition-all duration-300 ease-in-out"
-                  data-ig-origin-url="https://yassinemagri.vercel.app/"
-                  onClick={() => window.open('https://www.github.com/yassinemagri', '_blank')}
+            <Button
+              className="cursor-pointer hover:bg-black hover:text-white  transition-all duration-300 ease-in-out"
+              data-ig-origin-url="https://yassinemagri.vercel.app/"
+              onClick={() =>
+                window.open("https://www.github.com/yassinemagri", "_blank")
+              }
             >
               <Github />
             </Button>
-            <Button 
-                  className="cursor-pointer hover:bg-[#D62976] hover:text-white transition-all duration-300 ease-in-out"
-                  data-ig-origin-url="https://yassinemagri.vercel.app/"
-                  onClick={() => window.open('https://www.instagram.com/yassinemagri/', '_blank')}
+            <Button
+              className="cursor-pointer hover:bg-[#D62976] hover:text-white transition-all duration-300 ease-in-out"
+              data-ig-origin-url="https://yassinemagri.vercel.app/"
+              onClick={() =>
+                window.open("https://www.instagram.com/yassinemagri/", "_blank")
+              }
             >
               <Instagram />
             </Button>
 
-            <Button 
-                  className="cursor-pointer hover:bg-red-600 hover:text-white transition-all duration-300 ease-in-out"
-                  data-ig-origin-url="https://yassinemagri.vercel.app/"
-                  onClick={() => window.open('https://www.youtube.com/results?search_query=%40yassinemagri&sp=EgIQAg%253D%253D', '_blank', 'width=1000,height=900')}
+            <Button
+              className="cursor-pointer hover:bg-red-600 hover:text-white transition-all duration-300 ease-in-out"
+              data-ig-origin-url="https://yassinemagri.vercel.app/"
+              onClick={() =>
+                window.open(
+                  "https://www.youtube.com/results?search_query=%40yassinemagri&sp=EgIQAg%253D%253D",
+                  "_blank",
+                  "width=1000,height=900"
+                )
+              }
             >
               <Youtube />
             </Button>
 
-            <Button 
-                  className="cursor-pointer hover:bg-[#25D366] hover:text-white transition-all duration-300 ease-in-out"
-                  data-ig-origin-url="https://yassinemagri.vercel.app/"
-                  disabled
-                  onClick={() => window.open('https://yassinemagri.vercel.app/', '_blank', 'width=1000,height=900')}
+            <Button
+              className="cursor-pointer hover:bg-[#25D366] hover:text-white transition-all duration-300 ease-in-out"
+              data-ig-origin-url="https://yassinemagri.vercel.app/"
+              disabled
+              onClick={() =>
+                window.open(
+                  "https://yassinemagri.vercel.app/",
+                  "_blank",
+                  "width=1000,height=900"
+                )
+              }
             >
               <Phone />
             </Button>

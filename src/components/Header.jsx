@@ -46,7 +46,7 @@ function NavLinks() {
   const [contactDialogOpen,setContactDialogOpen] = useState(false)
 
   return (
-    <>
+    <div className="z-40">
       <Link
         to="/"
         className="text-rose-600 uppercase hover:text-rose-800 dark:text-rose-300 dark:hover:text-rose-100 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300"
@@ -72,6 +72,6 @@ function NavLinks() {
         
       {/* <Contact /> */}
       </a>
-    </>
+    </div>
   )
 }
