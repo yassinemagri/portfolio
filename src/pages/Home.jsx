@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import SeasonalEffect from "@/components/SeasonalEffect";
 import { Github, Instagram, Phone, Youtube } from "lucide-react";
 import imgDark from "/imgs/yassine-magri.png";
-import imgLight from "/imgs/yassine-magri-rose.png";
+import imgLight from "/imgs/yassine-magri-rose.jpg";
 import { useTheme } from "@/components/theme-provider";
 import MyProjects from "@/components/MyProjects";
 
