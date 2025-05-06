@@ -79,7 +79,7 @@ export default function Home() {
             <Button 
                   className="cursor-pointer hover:bg-black hover:text-white  transition-all duration-300 ease-in-out"
                   data-ig-origin-url="https://yassinemagri.vercel.app/"
-                  onClick={() => window.open('www.github.com/yassinemagri', '_blank')}
+                  onClick={() => window.open('https://www.github.com/yassinemagri', '_blank')}
             >
               <Github />
             </Button>

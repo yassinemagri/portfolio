@@ -6,6 +6,7 @@ import Layout from "./layout/Layout"
 import Home from "./pages/Home"
 import CV from "@/pages/CV"
 import { useTranslation } from "react-i18next"
+import NotFound from "./pages/NotFound"
 
 export default function App() {
   const { i18n } = useTranslation()
@@ -22,6 +23,7 @@ export default function App() {
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
         <Route path="cv" element={<CV />} />
+        <Route path="*" element={<NotFound />} />
         {/* Add other routes as needed */}
       </Route>
     </Routes>
