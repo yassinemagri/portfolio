@@ -23,8 +23,8 @@ export default function App() {
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
         <Route path="cv" element={<CV />} />
-      </Route>
       <Route path="/*" element={<NotFound />} />
+      </Route>
     </Routes>
   )
 }
