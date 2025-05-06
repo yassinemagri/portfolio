@@ -23,9 +23,8 @@ export default function App() {
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
         <Route path="cv" element={<CV />} />
-        <Route path="*" element={<NotFound />} />
-        {/* Add other routes as needed */}
       </Route>
+      <Route path="*" element={<NotFound />} />
     </Routes>
   )
 }
