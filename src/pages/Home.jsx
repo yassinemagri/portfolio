@@ -47,7 +47,7 @@ export default function Home() {
           variants={fadeIn}
         >
           <h1
-            className={`text-4xl font-hi-melody tracking-tight text-white sm:text-5xl md:text-6xl drop-shadow-lg`}
+            className={`text-3xl font-hi-melody tracking-tight text-white sm:text-5xl md:text-6xl drop-shadow-lg`}
           >
             <span className="block font-my-best">{t("home.brand")}</span>
             <span className="block text-rose-100">{t("home.title")}</span>
@@ -59,7 +59,7 @@ export default function Home() {
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <a
                 href="#projects"
-                className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-rose-900 dark:text-rose-100 bg-white/90 dark:bg-gray-900/90 hover:bg-white dark:hover:bg-gray-900 transition-colors duration-300 backdrop-blur-sm"
+                className="inline-flex items-center justify-center px-6 py-2 text-sm sm:px-8 sm:py-3 sm:text-base border border-transparent font-medium rounded-full text-rose-900 dark:text-rose-100 bg-white/90 dark:bg-gray-900/90 hover:bg-white dark:hover:bg-gray-900 transition-colors duration-300 backdrop-blur-sm"
               >
                 {t("home.viewProjects")}
               </a>
@@ -73,7 +73,7 @@ export default function Home() {
               </Link>
             </motion.div>
           </div>
-          <div className="space-x-4 ">
+          <div className="grid grid-cols-2 sm:flex gap-4 justify-center">
             <Button
               className="cursor-pointer hover:bg-black hover:text-white  transition-all duration-300 ease-in-out"
               data-ig-origin-url="https://yassinemagri.vercel.app/"
@@ -143,7 +143,7 @@ export default function Home() {
           >
             {t("home.myApproach")}
           </h2>
-          <div className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
             {[
               { key: "userCentered", icon: "M5 13l4 4L19 7" },
               {

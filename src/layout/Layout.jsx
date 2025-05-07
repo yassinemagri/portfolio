@@ -27,9 +27,9 @@ export default function Layout() {
             <Outlet />
           </main>
         </ContextMenuTrigger>
-        <ContextMenuContent className="w-64">
+        <ContextMenuContent className="w-64 dark:bg-gray-900">
           <ContextMenuItem
-            className="cursor-pointer"
+            className="cursor-pointer hover:bg-gray-800"
             inset
             onClick={() => history.back()}
           >
@@ -39,7 +39,7 @@ export default function Layout() {
             </ContextMenuShortcut>
           </ContextMenuItem>
           <ContextMenuItem
-            className="cursor-pointer"
+            className="cursor-pointer hover:bg-gray-800"
             inset
             onClick={() => history.forward()}
           >
@@ -49,7 +49,7 @@ export default function Layout() {
             </ContextMenuShortcut>
           </ContextMenuItem>
           <ContextMenuItem
-            className="cursor-pointer"
+            className="cursor-pointer hover:bg-gray-800"
             inset
             onClick={() => window.location.reload()}
           >
@@ -59,7 +59,7 @@ export default function Layout() {
             </ContextMenuShortcut>
           </ContextMenuItem>
           <ContextMenuItem
-            className="cursor-pointer"
+            className="cursor-pointer hover:bg-gray-800"
             disabled
             inset
             onClick={() => window.location.reload()}
