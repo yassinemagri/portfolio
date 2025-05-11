@@ -11,7 +11,6 @@ import MyProjects from "@/components/MyProjects";
 
 export default function Home() {
   const { t } = useTranslation();
-  // const { theme } = useTheme()
   const fadeIn = {
     initial: { opacity: 0, y: 20 },
     animate: { opacity: 1, y: 0 },
@@ -30,12 +29,10 @@ export default function Home() {
             }}
           ></div>
           <div className="absolute inset-0 bg-black/40 dark:bg-black/60 transition-colors duration-300"></div>
-          {/* Seasonal effect overlay */}
           <SeasonalEffect />
-          {/* Scroll indicator */}
-          <div className="absolute max-sm:bottom-0 min-md:bottom-20 left-1/2 transform -translate-x-1/2">
+          <div className="absolute bottom-5 sm:bottom-20 left-1/2 transform -translate-x-1/2">
             <div className="flex flex-col items-center gap-2">
-              <span className="text-sm text-rose-100">Scroll</span>
+              <span className="text-xs xs:text-sm text-rose-100">Scroll</span>
               <div className="w-px h-8 bg-gradient-to-b from-rose-100 to-transparent" />
             </div>
           </div>
@@ -47,15 +44,15 @@ export default function Home() {
           variants={fadeIn}
         >
           <h1
-            className={`text-3xl font-hi-melody tracking-tight text-white sm:text-5xl md:text-6xl drop-shadow-lg`}
+            className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-hi-melody tracking-tight text-white drop-shadow-lg"
           >
             <span className="block font-my-best">{t("home.brand")}</span>
             <span className="block text-rose-100">{t("home.title")}</span>
           </h1>
-          <p className="mt-3 text-base text-white sm:text-lg md:mt-5 md:text-xl max-w-2xl mx-auto drop-shadow-lg">
+          <p className="mt-3 text-sm xs:text-base sm:text-lg md:mt-5 md:text-xl max-w-2xl mx-auto drop-shadow-lg text-white">
             {t("home.subtitle")}
           </p>
-          <div className="m-8 flex justify-center space-x-4">
+          <div className="m-8 flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <a
                 href="#projects"
@@ -73,10 +70,9 @@ export default function Home() {
               </Link>
             </motion.div>
           </div>
-          <div className="grid grid-cols-2 sm:flex gap-4 justify-center">
+          <div className="grid grid-cols-2 gap-3 sm:flex sm:gap-4 justify-center mt-4 flex-wrap">
             <Button
-              className="cursor-pointer hover:bg-black hover:text-white  transition-all duration-300 ease-in-out"
-              data-ig-origin-url="https://yassinemagri.vercel.app/"
+              className="cursor-pointer hover:bg-black hover:text-white transition-all duration-300 ease-in-out"
               onClick={() =>
                 window.open("https://www.github.com/yassinemagri", "_blank")
               }
@@ -85,17 +81,14 @@ export default function Home() {
             </Button>
             <Button
               className="cursor-pointer hover:bg-[#D62976] hover:text-white transition-all duration-300 ease-in-out"
-              data-ig-origin-url="https://yassinemagri.vercel.app/"
               onClick={() =>
                 window.open("https://www.instagram.com/yassinemagri/", "_blank")
               }
             >
               <Instagram />
             </Button>
-
             <Button
               className="cursor-pointer hover:bg-red-600 hover:text-white transition-all duration-300 ease-in-out"
-              data-ig-origin-url="https://yassinemagri.vercel.app/"
               onClick={() =>
                 window.open(
                   "https://www.youtube.com/results?search_query=%40yassinemagri&sp=EgIQAg%253D%253D",
@@ -106,10 +99,8 @@ export default function Home() {
             >
               <Youtube />
             </Button>
-
             <Button
               className="cursor-pointer hover:bg-[#25D366] hover:text-white transition-all duration-300 ease-in-out"
-              data-ig-origin-url="https://yassinemagri.vercel.app/"
               disabled
               onClick={() =>
                 window.open(
@@ -125,12 +116,9 @@ export default function Home() {
         </motion.div>
       </div>
 
-      {/* Rest of the component remains the same */}
       <div className="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
         <MyProjects />
-        {/* Timeline Section */}
         <Timeline />
-        {/* Skills Scroll Section */}
         <InfiniteSkillsScroll />
         <motion.div
           className="mt-16"
@@ -138,12 +126,10 @@ export default function Home() {
           animate="animate"
           variants={fadeIn}
         >
-          <h2
-            className={`text-3xl font-hi-melody tracking-tight text-rose-800 dark:text-rose-300 transition-colors duration-300`}
-          >
+          <h2 className="text-2xl sm:text-3xl font-hi-melody tracking-tight text-rose-800 dark:text-rose-300 transition-colors duration-300">
             {t("home.myApproach")}
           </h2>
-          <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {[
               { key: "userCentered", icon: "M5 13l4 4L19 7" },
               {
@@ -177,9 +163,7 @@ export default function Home() {
                         </svg>
                       </span>
                     </div>
-                    <h3
-                      className={`mt-8 text-lg font-medium text-rose-900 dark:text-rose-200 tracking-tight font-hi-melody transition-colors duration-300`}
-                    >
+                    <h3 className="mt-8 text-lg font-medium text-rose-900 dark:text-rose-200 tracking-tight font-hi-melody transition-colors duration-300">
                       {t(`home.features.${feature.key}`)}
                     </h3>
                     <p className="mt-5 text-base text-rose-600 dark:text-rose-300 transition-colors duration-300">

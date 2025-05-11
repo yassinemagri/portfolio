@@ -5,6 +5,9 @@ import Home from "./pages/Home";
 import CV from "@/pages/CV";
 import { useTranslation } from "react-i18next";
 import NotFound from "./pages/NotFound";
+import Tailwind from "./pages/convert/Tailwind";
+import CSSGridGenerator from "./pages/convert/CSSGridGenerator";
+import MyTools from "./pages/convert/MyTools";
 
 export default function App() {
   const { i18n } = useTranslation();
@@ -22,6 +25,7 @@ export default function App() {
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
         <Route path="cv" element={<CV />} />
+        <Route path="mytools" element={<MyTools />} />
         <Route path="/*" element={<NotFound />} />
       </Route>
     </Routes>
