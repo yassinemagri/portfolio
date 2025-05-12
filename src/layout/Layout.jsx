@@ -26,8 +26,8 @@ export default function Layout() {
         <ContextMenuTrigger>
           <main>
 {visible ? <div className="fixed bottom-4 left-1/2 w-full transform -translate-x-1/2 bg-rose-800 text-rose-300 px-4 py-2 rounded shadow-md z-50">
-              🚧 Le site est en cours de développement
-              <p>Des améliorations et des corrections sont apportées en permanence. Merci pour votre compréhension !</p>
+              🚧 Site Under Development
+              <p>We’re constantly improving the site and fixing bugs. Thank you for your understanding!!</p>
             </div> : null}
             <Outlet />
           </main>
