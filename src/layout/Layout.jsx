@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+
 import {
   ContextMenu,
   ContextMenuContent,
@@ -9,13 +10,13 @@ import {
   ContextMenuShortcut,
   ContextMenuTrigger,
 } from "@/components/ui/context-menu";
-import {
-  ChevronLeft,
-  ChevronRight,
-  Download,
-  RefreshCcw,
-} from "lucide-react";
+import { ChevronLeft, ChevronRight, Download, RefreshCcw } from "lucide-react";
 export default function Layout() {
+  const [visible, setVisible] = useState(true)
+  useEffect(() => {
+    const timer = setTimeout(() => setVisible(false), 7000);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <div className="bg-rose-50 dark:bg-gray-950 min-h-screen transition-colors duration-300">
@@ -24,6 +25,10 @@ export default function Layout() {
       <ContextMenu>
         <ContextMenuTrigger>
           <main>
+{visible ? <div className="fixed bottom-4 left-1/2 w-full transform -translate-x-1/2 bg-rose-800 text-rose-300 px-4 py-2 rounded shadow-md z-50">
+              🚧 Le site est en cours de développement
+              <p>Des améliorations et des corrections sont apportées en permanence. Merci pour votre compréhension !</p>
+            </div> : null}
             <Outlet />
           </main>
         </ContextMenuTrigger>

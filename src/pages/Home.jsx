@@ -118,7 +118,7 @@ export default function Home() {
 
       <div className="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
         <MyProjects />
-        <Timeline />
+        {/* <Timeline /> */}
         <InfiniteSkillsScroll />
         <motion.div
           className="mt-16"
