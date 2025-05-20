@@ -19,6 +19,7 @@ export default function Home() {
 
   return (
     <div className="bg-rose-100 dark:bg-gray-950 transition-colors duration-300">
+      
       <div className="relative min-h-screen flex items-center justify-center">
         <div className="absolute inset-0">
           <div
@@ -29,7 +30,8 @@ export default function Home() {
             }}
           ></div>
           <div className="absolute inset-0 bg-black/40 dark:bg-black/60 transition-colors duration-300"></div>
-          <SeasonalEffect />
+
+          {/* <SeasonalEffect /> */}
           <div className="absolute bottom-5 sm:bottom-20 left-1/2 transform -translate-x-1/2">
             <div className="flex flex-col items-center gap-2">
               <span className="text-xs xs:text-sm text-rose-100">Scroll</span>
@@ -43,12 +45,10 @@ export default function Home() {
           animate="animate"
           variants={fadeIn}
         >
-          <h1
-            className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-hi-melody tracking-tight text-white drop-shadow-lg"
-          >
-            <span className="block font-my-best">{t("home.brand")}</span>
-            <span className="block text-rose-100">{t("home.title")}</span>
-          </h1>
+          <div className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-hi-melody tracking-tight text-white drop-shadow-lg">
+            <h1 className="block font-my-best"> Hi, I am <span className="text-white dark:text-gray-300" style={{textShadow : "rgb(255, 161, 173) 1px 1px 2px"}}>{t("home.brand")}</span></h1>
+            <h2 className="block text-rose-100">{t("home.title")}</h2>
+          </div>
           <p className="mt-3 text-sm xs:text-base sm:text-lg md:mt-5 md:text-xl max-w-2xl mx-auto drop-shadow-lg text-white">
             {t("home.subtitle")}
           </p>

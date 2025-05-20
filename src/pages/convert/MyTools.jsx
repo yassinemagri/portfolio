@@ -14,7 +14,7 @@ const MyTools = () => {
     return String(value).charAt(0).toUpperCase() + String(value).slice(1);
 }
   return (
-    <div className="container mx-auto py-8 px-4 bg-background h-screen">
+    <div className="container mx-auto py-8 px-4  h-screen">
       <div className="mx-auto max-w-4xl space-y-8">
         <div className="text-center space-y-2">
           <h2 className="text-3xl font-bold tracking-tight">

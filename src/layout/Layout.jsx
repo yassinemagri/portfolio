@@ -25,10 +25,13 @@ export default function Layout() {
       <ContextMenu>
         <ContextMenuTrigger>
           <main>
-{visible ? <div className="fixed bottom-4 left-1/2 w-full transform -translate-x-1/2 bg-rose-800 text-rose-300 px-4 py-2 rounded shadow-md z-50">
-              🚧 Site Under Development
-              <p>We’re constantly improving the site and fixing bugs. Thank you for your understanding!!</p>
-            </div> : null}
+{visible ? (<div className="text-center w-full transform  bg-rose-800 text-rose-300 px-4 py-2 rounded shadow-md z-50">
+        🚧 Site Under Development
+        <p>
+          We’re constantly improving the site and fixing bugs. Thank you for
+          your understanding!!
+        </p>
+      </div>) : null}
             <Outlet />
           </main>
         </ContextMenuTrigger>

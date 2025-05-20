@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import Layout from "./layout/Layout";
 import Home from "./pages/Home";
+import MyLinks from "./pages/mylinks/MyLinks";
 import CV from "@/pages/CV";
 import { useTranslation } from "react-i18next";
 import NotFound from "./pages/NotFound";
@@ -28,6 +29,7 @@ export default function App() {
         <Route path="mytools" element={<MyTools />} />
         <Route path="/*" element={<NotFound />} />
       </Route>
+        <Route path="mylinks" element={<MyLinks />} />
     </Routes>
   );
 }
