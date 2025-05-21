@@ -15,7 +15,7 @@ export default function MyLinks() {
             bio: ["vlogger", "Dev", "Designer"],
             links: [
               {
-                platform: "Website",
+                platform: "Portfolio",
                 icon: "Globe",
                 url: "/",
               },
