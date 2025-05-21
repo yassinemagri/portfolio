@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/context-menu";
 import { ChevronLeft, ChevronRight, Download, RefreshCcw } from "lucide-react";
 export default function Layout() {
-  const [visible, setVisible] = useState(true)
+  const [visible, setVisible] = useState(true);
   useEffect(() => {
     const timer = setTimeout(() => setVisible(false), 7000);
     return () => clearTimeout(timer);
@@ -25,13 +25,15 @@ export default function Layout() {
       <ContextMenu>
         <ContextMenuTrigger>
           <main>
-{visible ? (<div className="text-center w-full transform  bg-rose-800 text-rose-300 px-4 py-2 rounded shadow-md z-50">
-        🚧 Site Under Development
-        <p>
-          We’re constantly improving the site and fixing bugs. Thank you for
-          your understanding!!
-        </p>
-      </div>) : null}
+            {visible ? (
+              <div className="text-center w-full transform  bg-rose-800 text-rose-300 px-4 py-2 rounded shadow-md z-50">
+                🚧 Site Under Development
+                <p>
+                  We’re constantly improving the site and fixing bugs. Thank you
+                  for your understanding!!
+                </p>
+              </div>
+            ) : null}
             <Outlet />
           </main>
         </ContextMenuTrigger>

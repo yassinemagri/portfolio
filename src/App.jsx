@@ -29,7 +29,7 @@ export default function App() {
         <Route path="mytools" element={<MyTools />} />
         <Route path="/*" element={<NotFound />} />
       </Route>
-        <Route path="mylinks" element={<MyLinks />} />
+        <Route path="socials" element={<MyLinks />} />
     </Routes>
   );
 }
